@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from typing import Any, Dict
 
 
@@ -8,5 +8,9 @@ class Item:
     name: str
     type: str
     rarity: str
+
+    def to_dict(self):
+        return asdict(self)
+
 
 
